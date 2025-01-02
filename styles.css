@@ -141,10 +141,10 @@ footer p {
     color: var(--color-pie-texto); /* Texto blanco */
 }
 
-/* Media Queries (para móviles y pantallas pequeñas) */
+/* Media Queries (para pantallas menores o igual a 768px) */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.5rem; /* Reducimos el tamaño del título en pantallas más pequeñas */
+        display: none; /* Ocultamos el título en pantallas pequeñas */
     }
 
     main h2 {
@@ -158,12 +158,116 @@ footer p {
 
     /* Ajuste del logo en el header para pantallas pequeñas */
     header .header-logo {
-        width: 40px; /* Reducimos el tamaño del logo */
+        width: 100px; /* Reducimos el tamaño del logo */
     }
 
     /* Ajuste del logo en el footer para pantallas pequeñas */
     footer .footer-logo {
-        width: 25px; /* Reducimos aún más el tamaño del logo */
+        width: 75px; /* Reducimos aún más el tamaño del logo */
+    }
+
+    footer p {
+        display: none; /* Ocultamos el texto del pie de página en pantallas pequeñas */
+    }
+
+    /* Alineación de los enlaces de herramientas */
+    .links-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Ajuste de márgenes en el footer */
+    footer {
+        padding: 0.5rem; /* Reducimos el padding del pie de página */
+    }
+
+    /* Ajuste de padding en el contenedor principal */
+    main {
+        padding: 50px 20px;
+    }
+}
+
+/* Media Queries (para pantallas menores o igual a 425px) */
+@media (max-width: 425px) {
+    header h1 {
+        display: none; /* Ocultamos el título en pantallas de 425px o menos */
+    }
+
+    footer p {
+        display: none; /* Ocultamos el texto del pie de página en pantallas de 425px o menos */
+    }
+
+    .tool-link {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    /* Agrandamos el logo en el header para pantallas pequeñas */
+    header .header-logo {
+        width: 90px; /* Agrandamos el tamaño del logo */
+    }
+
+    /* Agrandamos el logo en el footer para pantallas pequeñas */
+    footer .footer-logo {
+        width: 50px; /* Agrandamos el tamaño del logo en el footer */
+    }
+
+    /* Centrado del logo */
+    header .header-logo-container,
+    footer .footer-logo-container {
+        justify-content: center; /* Centra los logos */
+    }
+
+    /* Ajuste de los márgenes en el footer */
+    footer {
+        padding: 0.5rem; /* Reducimos el padding del pie de página */
+    }
+
+    /* Ajuste de padding en el contenedor principal */
+    main {
+        padding: 50px 20px;
+    }
+
+    /* Alineación de los enlaces de herramientas */
+    .links-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Media Queries para pantallas más pequeñas (320px o menos) */
+@media (max-width: 375px) {
+    header h1 {
+        font-size: 2rem; /* Reducimos aún más el tamaño del título */
+    }
+
+    .tool-link {
+        font-size: 1rem; /* Reducimos el tamaño de los botones */
+        padding: 10px 20px; /* Menos padding para caber mejor en pantallas pequeñas */
+    }
+
+    /* Agrandamos el logo en el header para pantallas más pequeñas */
+    header .header-logo {
+        width: 120px; /* Agrandamos aún más el tamaño del logo en el header */
+    }
+
+    /* Agrandamos el logo en el footer para pantallas más pequeñas */
+    footer .footer-logo {
+        width: 70px; /* Agrandamos aún más el tamaño del logo en el footer */
+    }
+
+    footer p {
+        font-size: 1rem; /* Reducción del tamaño de la fuente del pie de página */
+    }
+
+    /* Ajuste del contenedor principal para dispositivos más pequeños */
+    main {
+        padding: 30px 15px; /* Reducimos el padding para que no se desborde */
+    }
+
+    /* Alineación de los enlaces de herramientas */
+    .links-container {
+        gap: 5px; /* Reducimos el espacio entre los enlaces */
     }
 }
 
