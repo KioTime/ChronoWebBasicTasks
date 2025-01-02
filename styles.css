@@ -158,6 +158,7 @@ footer p {
 
     /* Ajuste del logo en el header para pantallas pequeñas */
     header .header-logo {
+        margin-left: 2rem;
         width: 100px; /* Reducimos el tamaño del logo */
     }
 
