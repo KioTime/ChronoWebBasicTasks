@@ -28,21 +28,35 @@ body {
     min-height: 100vh;
 }
 
-/* Contenedor de la página */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
 /* Encabezado */
 header {
     background-color: var(--color-fondo); /* Fondo negro */
     color: var(--color-primario); /* Título dorado */
     padding: 80px 0; /* Suficiente espacio para destacar el título */
-    text-align: center;
     border-bottom: 3px solid var(--color-primario); /* Detalle dorado sutil */
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos del header verticalmente */
+    width: 100%; /* Asegura que el header ocupe todo el ancho de la página */
+}
+
+/* Contenedor para el logo */
+.header-logo-container {
+    display: flex;
+    align-items: center; /* Centra el logo verticalmente */
+    margin-right: 20px; /* Espacio entre el logo y el título */
+}
+
+/* Logo en el header */
+header .header-logo {
+    width: 6rem; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+/* Contenedor para el título */
+.header-title-container {
+    display: flex;
+    align-items: center; /* Centra el título verticalmente */
 }
 
 /* Estilos del título */
@@ -98,15 +112,33 @@ footer {
     background-color: var(--color-pie-fondo); /* Fondo negro más oscuro */
     color: var(--color-pie-texto); /* Texto blanco */
     text-align: center;
-    padding: 20px 0;
+    padding: 1rem;
     position: relative;
     width: 100%;
     bottom: 0;
+    display: flex;
+    justify-content: center; /* Centra los elementos del footer horizontalmente */
+    align-items: center; /* Centra los elementos del footer verticalmente */
 }
 
+/* Contenedor para el logo en el footer */
+.footer-logo-container {
+    display: flex;
+    align-items: center; /* Centra el logo verticalmente */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Logo en el footer */
+footer .footer-logo {
+    margin: 1.6rem;
+    width: 3rem; /* Ajusta el tamaño del logo en el footer */
+    height: auto;
+}
+
+/* Estilos del texto en el pie */
 footer p {
-    font-size: 1rem;
-    margin: 0;
+    font-size: 1.4rem;
+    color: var(--color-pie-texto); /* Texto blanco */
 }
 
 /* Media Queries (para móviles y pantallas pequeñas) */
@@ -122,6 +154,16 @@ footer p {
     .tool-link {
         font-size: 1.2rem;
         padding: 12px 25px;
+    }
+
+    /* Ajuste del logo en el header para pantallas pequeñas */
+    header .header-logo {
+        width: 40px; /* Reducimos el tamaño del logo */
+    }
+
+    /* Ajuste del logo en el footer para pantallas pequeñas */
+    footer .footer-logo {
+        width: 25px; /* Reducimos aún más el tamaño del logo */
     }
 }
 

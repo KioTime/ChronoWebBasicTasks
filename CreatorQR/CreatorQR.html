@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronoCreatorQR</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Vinculamos el archivo CSS -->
+    <link rel="stylesheet" href="CreatorQR.css">
+</head>
+    <body>
+
+        <header>
+            <div class="header-logo-container">
+                <img src="/images/ChronoGold.png" alt="Logo" class="header-logo"> <!-- Ruta de tu logo -->
+            </div>
+            <div class="container">
+                <h1>ChronoCreatorQR</h1> <!-- Título visible en la página -->
+            </div>
+        </header>
+    
+        <main>
+            <div class="qr-generator">
+                <input type="text" id="url-input" placeholder="Introduce una URL o texto" />
+                <div class="qr-buttons">
+                    <button onclick="generateQR()">Generar QR</button>
+                    <button onclick="downloadQR()">Descargar QR</button>
+                </div>
+            </div>
+        
+            <div class="qr-container" id="qrcode">
+                <!-- El QR generado aparecerá aquí -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-logo-container">
+                <img src="/images/ChronoGold.png" alt="Logo" class="footer-logo"> <!-- Ruta a tu logo en el pie -->
+            </div>
+            <p>© 2025 ChronoCreatorQR. Todos los derechos reservados.</p>
+        </footer>   
+
+    <!-- Incluimos la librería de QRCode.js -->
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+    <!-- Vinculamos el archivo JavaScript -->
+    <script src="CreatorQR.js"></script>
+
+    </body>
+</html>
