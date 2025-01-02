@@ -119,7 +119,6 @@ main {
     border-radius: 10px;
 }
 
-
 /* Pie de página */
 footer {
     background-color: var(--color-pie-fondo); /* Fondo negro más oscuro */
@@ -152,4 +151,37 @@ footer .footer-logo {
 footer p {
     font-size: 1.4rem;
     color: var(--color-pie-texto); /* Texto blanco */
+}
+
+/* Estilo para el contenedor del botón "Volver" */
+.back-button-container {
+    position: fixed;
+    bottom: 10rem; /* Distancia ajustada desde el pie de la página */
+    left: 3rem; /* Distancia desde el borde izquierdo */
+    z-index: 1000; /* Asegura que esté encima del contenido */
+}
+
+/* Estilo del botón "Volver" */
+.back-button {
+    width: 3rem; /* Tamaño pequeño */
+    height: 3rem; /* Tamaño pequeño */
+    padding: 0; /* Elimina padding extra */
+    background-color: var(--color-boton-fondo);
+    color: var(--color-fondo);
+    border: none;
+    border-radius: 50%; /* Hace el botón completamente redondo */
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Centra el contenido del botón */
+    justify-content: center; /* Centra la flecha dentro del botón */
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.back-button i {
+    font-size: 1.6rem; /* Tamaño pequeño de la flecha */
+    margin-right: 0; /* Elimina margen extra */
+}
+
+.back-button:hover {
+    background-color: var(--color-boton-hover);
 }
