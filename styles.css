@@ -1,0 +1,129 @@
+/* Establecemos las variables para los colores */
+:root {
+    --color-primario: #cc9a48; /* Dorado */
+    --color-secundario: #dfdfdf; /* Blanco */
+    --color-texto: #ffffff; /* Blanco para el texto */
+    --color-fondo: #161616; /* Fondo negro oscuro */
+    --color-pie-fondo: #101010; /* Fondo negro más oscuro para el pie */
+    --color-pie-texto: #fff; /* Texto blanco en el pie */
+    --color-boton-fondo: #cc9a48; /* Fondo de los botones dorado */
+    --color-boton-hover: #826343; /* Color de los botones al hacer hover (detalles sutiles) */
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente y colores base */
+body {
+    font-family: 'Roboto', sans-serif; /* Usamos la fuente Roboto */
+    background-color: var(--color-fondo); /* Fondo general negro */
+    color: var(--color-texto); /* Color blanco para el texto */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Contenedor de la página */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-fondo); /* Fondo negro */
+    color: var(--color-primario); /* Título dorado */
+    padding: 80px 0; /* Suficiente espacio para destacar el título */
+    text-align: center;
+    border-bottom: 3px solid var(--color-primario); /* Detalle dorado sutil */
+}
+
+/* Estilos del título */
+header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-primario); /* Título en dorado */
+}
+
+/* Contenido principal */
+main {
+    background-color: var(--color-fondo); /* Fondo negro para mantener la uniformidad */
+    padding: 100px 0 50px; /* Espacio superior aumentado para separar más del header */
+    flex: 1;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: var(--color-secundario); /* Color blanco para los subtítulos */
+    margin-bottom: 30px;
+}
+
+/* Enlaces de herramientas */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.tool-link {
+    display: inline-block;
+    background-color: var(--color-boton-fondo); /* Fondo dorado de los botones */
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Agregamos sombra sutil a los botones */
+}
+
+.tool-link:hover {
+    background-color: var(--color-boton-hover); /* Fondo de los botones al hacer hover */
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-pie-fondo); /* Fondo negro más oscuro */
+    color: var(--color-pie-texto); /* Texto blanco */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Media Queries (para móviles y pantallas pequeñas) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Reducimos el tamaño del título en pantallas más pequeñas */
+    }
+
+    main h2 {
+        font-size: 1.6rem; /* Reducimos el tamaño de los subtítulos */
+    }
+
+    .tool-link {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+}
+
+/* Importar la fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
