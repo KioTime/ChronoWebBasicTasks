@@ -1,0 +1,300 @@
+/* Establecemos las variables para los colores */
+:root {
+    --color-primario: #cc9a48; /* Dorado */
+    --color-secundario: #dfdfdf; /* Blanco */
+    --color-texto: #ffffff; /* Blanco para el texto */
+    --color-fondo: #161616; /* Fondo negro oscuro */
+    --color-pie-fondo: #101010; /* Fondo negro más oscuro para el pie */
+    --color-pie-texto: #fff; /* Texto blanco en el pie */
+    --color-boton-fondo: #cc9a48; /* Fondo de los botones dorado */
+    --color-boton-hover: #826343; /* Color de los botones al hacer hover (detalles sutiles) */
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente y colores base */
+body {
+    font-family: 'Roboto', sans-serif; /* Usamos la fuente Roboto */
+    background-color: var(--color-fondo); /* Fondo general negro */
+    color: var(--color-texto); /* Color blanco para el texto */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos el 100% de la altura de la pantalla */
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-fondo); /* Negro */
+    color: var(--color-primario); /* Dorado */
+    border-bottom: solid var(--color-boton-fondo); /* Dorado */
+    text-align: center;
+    padding: 3.6rem;
+    padding-left: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem; /* Aumentado el tamaño del título */
+    font-weight: 600; /* Negrita para destacar */
+}
+
+/* Contenedor para el logo en el header */
+.header-logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem; /* Espacio entre el logo y el título */
+}
+
+/* Logo en el header */
+header .header-logo {
+    width: 4rem; /* Ajustamos el tamaño del logo */
+    height: auto;
+}
+
+/* Contenido principal */
+main {
+    background-color: var(--color-fondo); /* Fondo negro para mantener la uniformidad */
+    padding: 16rem 0 50px; /* Espacio superior aumentado para separar más del header */
+    flex-grow: 1; /* Asegura que el contenido principal ocupe el espacio restante */
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: var(--color-secundario); /* Color blanco para los subtítulos */
+    margin-bottom: 1rem;
+}
+
+/* Estilos para los inputs (selector de imagen y tipo de formato) */
+.selectcontainer {
+    display: flex;
+    justify-content: center; /* Alineación horizontal centrada */
+    align-items: center; /* Alineación vertical centrada */
+    gap: 2rem; /* Espacio entre el selector y el botón */
+    margin-bottom: 2rem; /* Margen inferior */
+}
+
+select {
+    padding: 1rem;
+    background-color: var(--color-boton-fondo); /* Fondo claro */
+    border: 1px solid var(--color-fondo); /* Borde dorado */
+    color: var(--color-texto); /* Color del texto (blanco) */
+    font-size: 1rem;
+    border-radius: 0.6rem;
+}
+
+/* Botón de archivo personalizado */
+.file-upload-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center;
+}
+
+#customFileButton {
+    background-color: var(--color-boton-fondo); /* Fondo dorado */
+    color: var(--color-texto); /* Texto blanco */
+    padding: 10px 20px; /* Hacemos el botón más delgado */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Transición para el cambio de color */
+    width: auto; /* Hace que el ancho se ajuste al contenido */
+    min-width: 200px; /* Asegura un ancho mínimo para el botón */
+}
+
+/* Efecto al pasar por encima */
+#customFileButton:hover {
+    background-color: #826343; /* Cambio de color dorado oscuro al pasar por encima */
+}
+
+input[type="file"] {
+    display: none; /* Ocultamos el botón original del input de archivo */
+}
+
+
+/* Estilos del texto del nombre de archivo */
+#fileName {
+    font-size: 1rem;
+    color: var(--color-secundario); /* Blanco para el texto del nombre de la imagen */
+    font-weight: normal;
+}
+
+button {
+    background-color: var(--color-boton-fondo); /* Fondo dorado */
+    color: var(--color-texto);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-boton-hover); /* Cambio de color al hacer hover */
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Estilos del contenedor de descarga */
+#downloadContainer {
+    display: none;
+    margin-top: 20px;
+    text-align: center; /* Centra el contenido del contenedor */
+}
+
+#downloadButton {
+    background-color: var(--color-fondo); /* Fondo dorado */
+    color: var(--color-texto); /* Texto blanco */
+    padding: 15px 30px; /* Agregamos padding para darle espacio interno al botón */
+    border: none; /* Eliminar cualquier borde predeterminado */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 1.2rem;
+    outline: none; /* Eliminar el contorno que algunos navegadores agregan al hacer foco */
+}
+
+/* Sin efecto hover */
+#downloadButton:hover {
+    background-color: var(--color-fondo); /* Sin cambio de color al pasar el mouse */
+}
+
+#formatText {
+    font-size: 1rem;
+    color: var(--color-texto);
+    font-weight: bold;
+}
+
+/* Canvas */
+#canvas {
+    width: 26vw; /* Ajusta el ancho al 100% del ancho de la ventana */
+    height: auto; /* Ajusta la altura al 100% de la ventana */
+    object-fit: contain; /* Mantiene la proporción de la imagen, sin que se recorte */
+    display: block; /* Asegura que el canvas sea un bloque */
+    margin: 6rem auto; /* Centra el canvas */
+}
+
+
+/* Pie de página */
+footer {
+    background-color: var(--color-pie-fondo); /* Fondo negro más oscuro */
+    color: var(--color-pie-texto); /* Texto blanco */
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra los elementos del footer horizontalmente */
+    align-items: center; /* Centra los elementos del footer verticalmente */
+    position: relative; /* Permite que el pie se ajuste al final del contenido */
+    margin-top: 6%;
+}
+
+/* Contenedor para el logo en el footer */
+.footer-logo-container {
+    display: flex;
+    align-items: center; /* Centra el logo verticalmente */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Logo en el footer */
+footer .footer-logo {
+    margin: 1.6rem;
+    width: 3rem; /* Ajusta el tamaño del logo en el footer */
+    height: auto;
+}
+
+/* Estilos del texto en el pie */
+footer p {
+    font-size: 1.4rem;
+    color: var(--color-pie-texto); /* Texto blanco */
+}
+
+/* Estilo para el contenedor del botón "Volver" */
+.back-button-container {
+    position: fixed;
+    bottom: 2.6rem; /* Distancia ajustada desde el pie de la página */
+    left: 3rem; /* Distancia desde el borde izquierdo */
+    z-index: 1000; /* Asegura que esté encima del contenido */
+}
+
+/* Estilo del botón "Volver" */
+.back-button {
+    width: 3rem; /* Tamaño pequeño */
+    height: 3rem; /* Tamaño pequeño */
+    padding: 0; /* Elimina padding extra */
+    background-color: var(--color-boton-fondo);
+    color: var(--color-fondo);
+    border: none;
+    border-radius: 50%; /* Hace el botón completamente redondo */
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Centra el contenido del botón */
+    justify-content: center; /* Centra la flecha dentro del botón */
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.back-button i {
+    font-size: 1.6rem; /* Tamaño pequeño de la flecha */
+    margin-right: 0; /* Elimina margen extra */
+}
+
+.back-button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Media Queries (para móviles y pantallas pequeñas) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Reducimos el tamaño del título en pantallas más pequeñas */
+    }
+
+    main h2 {
+        font-size: 1.6rem; /* Reducimos el tamaño de los subtítulos */
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+@media (max-width: 425px) {
+    header h1 {
+        display: none; /* Oculta el título completamente */
+    }
+
+    /* Logo en el header */
+    header .header-logo {
+        width: 4rem; /* Ajustamos el tamaño del logo */
+        height: auto;
+        margin-left: 6rem;
+    }
+
+    main h2 {
+        font-size: 1.6rem; /* Reducimos el tamaño de los subtítulos */
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Importar la fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');

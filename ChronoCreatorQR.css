@@ -1,0 +1,320 @@
+/* Establecemos las variables para los colores */
+:root {
+    --color-primario: #cc9a48; /* Dorado */
+    --color-secundario: #dfdfdf; /* Blanco */
+    --color-texto: #ffffff; /* Blanco para el texto */
+    --color-fondo: #161616; /* Fondo negro oscuro */
+    --color-pie-fondo: #101010; /* Fondo negro más oscuro para el pie */
+    --color-pie-texto: #fff; /* Texto blanco en el pie */
+    --color-boton-fondo: #cc9a48; /* Fondo de los botones dorado */
+    --color-boton-hover: #826343; /* Color de los botones al hacer hover (detalles sutiles) */
+}
+
+/* Estilo General */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Nueva fuente */
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la pantalla */
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-fondo); /* Negro */
+    color: var(--color-primario); /* Dorado */
+    border-bottom: solid var(--color-boton-fondo); /* Dorado */
+    text-align: center;
+    padding: 3.6rem;
+    padding-left: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem; /* Aumentado el tamaño del título */
+    font-weight: 600; /* Negrita para destacar */
+}
+
+/* Contenedor para el logo en el header */
+.header-logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem; /* Espacio entre el logo y el título */
+}
+
+/* Logo en el header */
+.header-logo {
+    width: 4rem; /* Ajustamos el tamaño del logo */
+    height: auto;
+}
+
+/* Contenido principal */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10rem; /* Ajuste para evitar que se superponga con el header */
+    padding-bottom: 3rem; /* Espacio para evitar que el footer se solape con contenido */
+    box-sizing: border-box;
+}
+
+/* Generador de QR */
+.qr-generator {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.qr-generator input {
+    padding: 1rem;
+    font-size: 1.6rem;
+    width: 30rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-secundario);
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+    font-family: 'Poppins', Arial, sans-serif; /* Aplicamos la nueva fuente */
+}
+
+.qr-buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espaciado entre botones */
+}
+
+.qr-buttons button {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    background-color: var(--color-boton-fondo);
+    color: var(--color-fondo);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', Arial, sans-serif; /* Aplicamos la nueva fuente */
+}
+
+.qr-buttons button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+.qr-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem; /* Tamaño reducido */
+    height: 20rem; /* Tamaño reducido */
+    border: 3px dashed var(--color-secundario);
+    border-radius: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-pie-fondo); /* Fondo negro más oscuro */
+    color: var(--color-pie-texto); /* Texto blanco */
+    text-align: center;
+    padding: 0rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra los elementos del footer horizontalmente */
+    align-items: center; /* Centra los elementos del footer verticalmente */
+    box-sizing: border-box;
+}
+
+/* Contenedor para el logo en el footer */
+.footer-logo-container {
+    display: flex;
+    align-items: center; /* Centra el logo verticalmente */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Logo en el footer */
+footer .footer-logo {
+    margin: 1.6rem;
+    width: 3rem; /* Ajusta el tamaño del logo en el footer */
+    height: auto;
+}
+
+/* Estilos del texto en el pie */
+footer p {
+    font-size: 1.4rem;
+    color: var(--color-pie-texto); /* Texto blanco */
+}
+
+/* Estilo para el contenedor del botón "Volver" */
+.back-button-container {
+    position: absolute; /* Lo movemos arriba del footer */
+    bottom: 4rem; /* Ajustamos la posición para subir el botón */
+    margin-bottom: 6rem;
+    left: 3rem;
+    z-index: 1000; /* Asegura que esté encima del contenido */
+}
+
+/* Estilo del botón "Volver" */
+.back-button {
+    width: 3rem; /* Tamaño pequeño */
+    height: 3rem; /* Tamaño pequeño */
+    padding: 0; /* Elimina padding extra */
+    background-color: var(--color-boton-fondo);
+    color: var(--color-fondo);
+    border: none;
+    border-radius: 50%; /* Hace el botón completamente redondo */
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Centra el contenido del botón */
+    justify-content: center; /* Centra la flecha dentro del botón */
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.back-button i {
+    font-size: 1.6rem; /* Tamaño pequeño de la flecha */
+    margin-right: 0; /* Elimina margen extra */
+}
+
+.back-button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Media Query para pantallas grandes (2560px o más) */
+@media (min-width: 2560px) {
+    header h1 {
+        font-size: 2.5rem; /* Reducimos el tamaño del título en pantallas más pequeñas */
+    }
+
+    .qr-generator {
+        margin-top: 6rem ;
+    }
+}
+
+@media (min-width: 1024px) {
+    .qr-generator {
+        margin-top: 6rem ;
+    }
+}
+
+/* Media Queries (para pantallas menores o igual a 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Reducimos el tamaño del título en pantallas más pequeñas */
+    }
+    main {
+        padding: 5rem 1rem; /* Ajuste en los márgenes */
+    }
+
+    header .header-logo {
+        width: 4rem;
+        height: auto;
+    }
+    .qr-generator {
+        margin-top: 6rem ;
+    }
+
+    .qr-generator input {
+        width: 20rem; /* Ajusta el tamaño del input */
+        font-size: 1.4rem; /* Reducción en el tamaño de la fuente */
+    }
+
+    .qr-buttons button {
+        padding: 0.8rem 1.5rem; /* Reducimos el tamaño de los botones */
+        font-size: 1.4rem; /* Reducción en el tamaño de la fuente */
+    }
+
+    .qr-container {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    footer p {
+        font-size: 1.2rem;
+
+    }
+
+    footer .footer-logo {
+        width: 2rem;
+    }
+
+    .back-button-container {
+        bottom: 5rem; /* Subimos un poco el botón "Volver" */
+    }
+}
+
+/* Media Queries (para pantallas menores o igual a 425px) */
+@media (max-width: 425px) {
+    header h1 {
+        display: none; /* Oculta el título completamente */
+    }
+
+    header .header-logo {
+        width: 4rem; /* Ajustamos el tamaño del logo */
+        height: auto;
+        margin-left: 3rem;
+    }
+
+    .qr-generator input {
+        width: 18rem; /* Ajuste del tamaño del input */
+        font-size: 1.2rem; /* Reducción en el tamaño de la fuente */
+    }
+
+    .qr-buttons button {
+        padding: 0.7rem 1.2rem; /* Botones más pequeños */
+        font-size: 1.2rem; /* Reducción en el tamaño de la fuente */
+    }
+
+    footer p {
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+
+    .qr-container {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    main {
+        padding: 4rem 0.5rem; /* Ajustes de los márgenes */
+    }
+}
+
+/* Media Queries para pantallas más pequeñas (320px o menos) */
+@media (max-width: 375px) {
+    header h1 {
+        font-size: 1.2rem; /* Aún más pequeño */
+    }
+
+    .qr-generator input {
+        width: 16rem; /* Ajuste aún mayor para el input */
+        font-size: 1.2rem; /* Reducción en el tamaño de la fuente */
+    }
+
+    .qr-buttons button {
+        padding: 0.6rem 1rem; /* Botones más pequeños */
+        font-size: 1rem; /* Reducción en el tamaño de la fuente */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Texto más pequeño en el pie */
+    }
+
+    .qr-container {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    main {
+        padding: 3rem 0.3rem;
+    }
+}
