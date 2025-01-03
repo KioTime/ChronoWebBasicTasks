@@ -32,7 +32,7 @@ body {
 header {
     background-color: var(--color-fondo); /* Fondo negro */
     color: var(--color-primario); /* Título dorado */
-    padding: 80px 0; /* Suficiente espacio para destacar el título */
+    padding: 6rem 0; /* Suficiente espacio para destacar el título */
     border-bottom: 3px solid var(--color-primario); /* Detalle dorado sutil */
     display: flex;
     justify-content: center; /* Centra los elementos horizontalmente */
@@ -167,9 +167,7 @@ footer p {
         width: 75px; /* Reducimos aún más el tamaño del logo */
     }
 
-    footer p {
-        display: none; /* Ocultamos el texto del pie de página en pantallas pequeñas */
-    }
+
 
     /* Alineación de los enlaces de herramientas */
     .links-container {
@@ -192,10 +190,6 @@ footer p {
 @media (max-width: 425px) {
     header h1 {
         display: none; /* Ocultamos el título en pantallas de 425px o menos */
-    }
-
-    footer p {
-        display: none; /* Ocultamos el texto del pie de página en pantallas de 425px o menos */
     }
 
     .tool-link {
